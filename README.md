@@ -1,194 +1,237 @@
 🚀 Crypto Tracker Telegram Bot
 
-A simple, lightweight, and easy-to-use Telegram bot that tracks real-time cryptocurrency prices using the Binance API.
+<div align="center">
 
-With this bot, you can instantly check Bitcoin (BTC) and Ethereum (ETH) prices in USDT directly from Telegram.
+📈 Track Cryptocurrency Prices Directly From Telegram
 
-Whether you are a cryptocurrency enthusiast, a beginner developer, or someone learning Python Telegram bot development, this project provides a simple starting point for building your own cryptocurrency tracking bot.
+A lightweight Python-powered Telegram bot that fetches real-time cryptocurrency prices using the Binance API.
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white) ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white) ![Binance](https://img.shields.io/badge/API-Binance-F0B90B?style=for-the-badge&logo=binance&logoColor=black) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+Developed by Ahmet Baytören
+
+Features • Installation • Usage • Configuration • Contributing
+
+</div>
+
+🌟 Overview
+
+Crypto Tracker Telegram Bot is a simple yet powerful cryptocurrency tracking application built with Python.
+
+It allows users to monitor cryptocurrency prices directly through Telegram without visiting cryptocurrency exchanges or opening additional applications.
+
+Powered by the Binance public API, the bot retrieves the latest market prices and delivers them directly to your Telegram chat.
+
+Whether you're a crypto enthusiast, a Python beginner, or a developer interested in Telegram bot development, this project is a great starting point.
 
 ✨ Features
-📈 Real-Time Cryptocurrency Prices: Fetches the latest cryptocurrency prices from Binance.
-₿ Bitcoin Tracking: Get the current BTC/USDT price.
-Ξ Ethereum Tracking: Get the current ETH/USDT price.
-🤖 Telegram Integration: Easily interact with the bot through Telegram commands.
-⚡ Automatic Updates: Displays cryptocurrency prices at regular intervals.
-🌐 Binance API: Uses Binance's public market data API. No Binance API key is required.
-🐍 Python-Based: Built with Python and the python-telegram-bot library.
-🛠️ Open Source: Free to use, modify, and improve.
-📸 Bot Preview
 
-When you start the bot using the /start command, you will receive a welcome message.
+<table>
+<tr>
+<td width="50%">
 
-Example:
+📊 Real-Time Prices
+
+Get the latest cryptocurrency prices directly from Binance.
+
+</td>
+<td width="50%">
+
+🤖 Telegram Integration
+
+Interact with your cryptocurrency tracker through simple commands.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+₿ Bitcoin Tracking
+
+Monitor the BTC/USDT trading pair.
+
+</td>
+<td width="50%">
+
+Ξ Ethereum Tracking
+
+Monitor the ETH/USDT trading pair.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+⚡ Lightweight & Fast
+
+Built with Python and asynchronous programming.
+
+</td>
+<td width="50%">
+
+🔓 No Binance API Key
+
+Uses Binance's public market data endpoint.
+
+</td>
+</tr>
+</table>
+
+📸 Preview
+
+<div align="center">
+
+Command	Description
+/start	Welcome message and bot information
+/kripto	Cryptocurrency price information
+
+Example Telegram Response
 
 text
-Hello! I am a cryptocurrency tracking bot.
-
-Created by Ahmet Baytören.
-
-Instagram: https://www.instagram.com/g0dvll
-GitHub: https://github.com/ahmetbaytoren
-
-For cryptocurrency prices, use:
-/kripto
+₿ Bitcoin: $67,450.25
+Ξ Ethereum: $3,520.80
 
 
-When you send /kripto, the bot retrieves cryptocurrency prices from Binance.
+Illustrative prices only. Actual prices depend on market conditions.
 
-Example response:
+</div>
 
-text
-Bitcoin: $67450.25
-Ethereum: $3520.80
-
-
-Prices shown above are illustrative examples and not live market prices.
-
-🧰 Technologies Used
-Technology	Purpose
-Python 3	Main programming language
-python-telegram-bot	Telegram Bot API integration
-Binance API	Cryptocurrency market data
-Requests	HTTP requests
-Asyncio	Asynchronous programming
+🛠️ Built With
+Technology	Description
+🐍 Python	Core programming language
+🤖 python-telegram-bot	Telegram Bot API integration
+🌐 Binance API	Live cryptocurrency market data
+⚡ Asyncio	Asynchronous task management
+📡 Requests	HTTP communication
 📋 Requirements
 
-Before installing the project, make sure you have:
+Before getting started, make sure you have:
 
-Python 3.9 or newer.
-A Telegram account.
-A Telegram bot token from BotFather.
-An internet connection.
+Python 3.9 or newer
+A Telegram account
+A Telegram bot token
+An active internet connection
 
-You do not need a Binance account or Binance API key because the project uses Binance's public ticker endpoint.
+No Binance account or private Binance API key is required.
 
-⚙️ Installation Guide
+🚀 Installation
 
-Follow these steps to create and run your own cryptocurrency tracking bot.
+Follow the instructions below to set up your own cryptocurrency tracking bot.
 
 1. Clone the Repository
-
-Open your terminal and run:
-
 bash
 git clone https://github.com/ahmetbaytoren/crypto-tracker-telegram-bot.git
-
-
-Navigate to the project directory:
 
 bash
 cd crypto-tracker-telegram-bot
 
 2. Install Dependencies
+bash
+pip install -r requirements.txt
 
-Install the required Python packages:
+
+Or install the packages manually:
 
 bash
 pip install python-telegram-bot requests
 
-3. Create Your Own Telegram Bot
+3. Create Your Telegram Bot
 
-You need to create a Telegram bot before running the application.
+You need a Telegram bot token to run your own instance.
 
 Open Telegram.
 Search for @BotFather.
-Start a conversation by sending /start.
-Send the /newbot command.
-Enter a display name for your bot.
-Choose a unique username ending in bot.
-BotFather will generate an API token for your bot.
-Copy your token and keep it private.
+Send /start.
+Send /newbot.
+Choose a name for your bot.
+Choose a unique username ending with bot.
+Copy the API token provided by BotFather.
 
-Important: Never share your Telegram bot token publicly or upload it to GitHub.
+<details>
+<summary>🔑 Where can I get my Telegram Bot Token?</summary>
 
-4. Configure Your Bot Token
+Open Telegram BotFather and follow the instructions above.
 
-Open the Python source file and configure your bot token using an environment variable.
+BotFather will provide a token similar to this:
 
-For Linux and macOS:
+text
+123456789:YOUR_SECRET_BOT_TOKEN
+
+
+Never share your real token or upload it to GitHub.
+
+</details>
+
+4. Configure Your Environment
+
+Set your Telegram bot token as an environment variable.
+
+Linux / macOS
 
 bash
 export TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN"
 
 
-For Windows PowerShell:
+Windows PowerShell
 
 powershell
 $env:TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN"
 
 
-Your Python application should read the token like this:
+Your Python application should read the token from the environment rather than storing it directly in source code.
 
-python
-import os
-
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-
-if not TOKEN:
-    raise ValueError("TELEGRAM_BOT_TOKEN is not configured.")
-
-5. Run the Application
-
-Start your bot:
-
+5. Start the Bot
 bash
 python main.py
 
 
-If everything is configured correctly, your Telegram bot will start polling for incoming messages.
+🎉 Congratulations! Your Telegram cryptocurrency bot is now running.
 
-🤖 How to Use the Bot
+💬 Usage
 
-Once your bot is running, open Telegram and search for the username you selected during the BotFather setup.
+After launching your application, open Telegram and search for your bot's username.
 
 Available Commands
-Command	Description
-/start	Starts the bot and displays the welcome message.
-/kripto	Retrieves Bitcoin and Ethereum prices from Binance.
-Starting the Bot
-
-Send:
-
+Command	Function
+/start	Start the bot and display the welcome message
+/kripto	Get Bitcoin and Ethereum prices
+Start Command
 text
 /start
 
 
-The bot will introduce itself and show the available commands.
+The bot welcomes the user and provides information about the project and available commands.
 
-Checking Cryptocurrency Prices
-
-Send:
-
+Cryptocurrency Command
 text
 /kripto
 
 
-The bot will retrieve the latest BTC/USDT and ETH/USDT prices.
+The bot retrieves the latest BTC/USDT and ETH/USDT prices from Binance and sends them to Telegram.
 
-🔌 Binance API Integration
+🌐 Binance API
 
-This project uses Binance's public cryptocurrency ticker endpoint.
+This project uses Binance's public ticker price endpoint.
 
-API Endpoint:
+API Endpoint
 
 text
 https://api.binance.com/api/v3/ticker/price
 
+Supported Trading Pairs
+Cryptocurrency	Symbol
+Bitcoin	BTCUSDT
+Ethereum	ETHUSDT
+Example Request
+python
+import requests
 
-To retrieve Bitcoin's price:
+def get_coin_price(symbol):
+    url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
+    data = requests.get(url).json()
+    return float(data["price"])
 
-text
-https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT
-
-
-To retrieve Ethereum's price:
-
-text
-https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT
-
-
-Example API response:
-
+Example API Response
 json
 {
     "symbol": "BTCUSDT",
@@ -196,40 +239,41 @@ json
 }
 
 
-The bot converts the returned price into a floating-point number and sends it to the Telegram user.
+The API returns the latest available ticker price for the requested trading pair.
 
-No private Binance API credentials are required.
+Official documentation:
+
+Binance Spot API Documentation
 
 📁 Project Structure
-
-A recommended project structure:
-
 text
 crypto-tracker-telegram-bot/
 │
 ├── main.py
 ├── requirements.txt
-├── .gitignore
 ├── .env.example
+├── .gitignore
+├── LICENSE
 └── README.md
 
-File Descriptions
-main.py: Main Telegram bot application.
-requirements.txt: Required Python dependencies.
-.gitignore: Prevents sensitive files from being uploaded.
-.env.example: Example environment configuration.
-README.md: Project documentation.
-🔒 Security
+File	Description
+main.py	Main application
+requirements.txt	Python dependencies
+.env.example	Example environment configuration
+.gitignore	Files excluded from Git
+LICENSE	Project license
+README.md	Project documentation
+🔐 Security
 
-Security is important when running Telegram bots.
+Your Telegram bot token is private information.
 
-Please follow these recommendations:
+Please follow these security practices:
 
 Never publish your Telegram bot token.
-Never commit .env files to GitHub.
-Use environment variables to store sensitive credentials.
-Regenerate your bot token if it is accidentally exposed.
-Avoid sharing private configuration files.
+Store credentials in environment variables.
+Never commit .env files.
+Regenerate your token if it becomes publicly exposed.
+Do not share private configuration files.
 
 Example .gitignore:
 
@@ -239,99 +283,72 @@ venv/
 __pycache__/
 *.pyc
 
-🛠️ Troubleshooting
-Bot Does Not Start
+🗺️ Roadmap
 
-Make sure that:
+Planned improvements and possible future features:
 
-Python is installed correctly.
-All dependencies are installed.
-Your Telegram bot token is valid.
-Your internet connection is working.
-Invalid Telegram Token
-
-If you receive an authentication error, check your token through BotFather.
-
-Binance API Errors
-
-If cryptocurrency prices cannot be retrieved:
-
-Check your internet connection.
-Make sure Binance's API is accessible.
-Verify the trading symbol.
-Check whether you have exceeded API rate limits.
-Bot Stops Responding
-
-Make sure your Python application is still running. The bot must remain active to receive Telegram updates.
-
-🚀 Future Improvements
-
-This project can be extended with additional features.
-
-Some ideas for future versions:
-
-Add more cryptocurrencies.
-Add Solana (SOL), BNB, XRP, and Dogecoin (DOGE).
-Add inline Telegram keyboards.
-Allow users to select their preferred cryptocurrencies.
-Add price alerts and notifications.
-Add percentage change tracking.
-Add 24-hour high and low prices.
-Add cryptocurrency charts.
-Add database support.
-Add automatic scheduled price updates.
-Add Docker support.
-Add deployment instructions for cloud servers.
-
-Contributions and suggestions are welcome!
-
+Telegram bot integration
+Binance API integration
+Bitcoin price tracking
+Ethereum price tracking
+Support for additional cryptocurrencies
+Interactive Telegram keyboards
+Custom cryptocurrency selection
+Price alerts and notifications
+24-hour price change tracking
+Cryptocurrency charts
+Database integration
+Docker support
+Cloud deployment guide
 🤝 Contributing
 
-Contributions are welcome!
+Contributions, suggestions, and bug reports are always welcome!
 
-If you want to improve this project:
+To contribute:
 
 Fork this repository.
-Create a new branch.
-bash
-git checkout -b feature/new-feature
-
+Create a new feature branch.
 Make your changes.
 Commit your changes.
-bash
-git commit -m "Add new feature"
-
 Push your branch.
-bash
-git push origin feature/new-feature
-
 Open a Pull Request.
+bash
+git checkout -b feature/my-feature
+git add .
+git commit -m "Add my feature"
+git push origin feature/my-feature
 
-Feel free to report bugs, suggest improvements, or contribute new features.
 
-👨‍💻 Author
+Let's make this project better together!
+
+👨‍💻 Developer
+
+<div align="center">
 
 Ahmet Baytören
 
-Instagram: @g0dvll
-GitHub: @ahmetbaytoren
+Python Developer | Open Source Enthusiast
+
+![GitHub](https://img.shields.io/badge/GitHub-ahmetbaytoren-181717?style=for-the-badge&logo=github)
+
+![Instagram](https://img.shields.io/badge/Instagram-g0dvll-E4405F?style=for-the-badge&logo=instagram&logoColor=white)
+
+</div>
+
 📄 License
 
-This project is open-source. You are welcome to explore, modify, and learn from the source code.
+This project is distributed under the MIT License.
 
-If you redistribute or modify this project, please retain the original author attribution.
+See the LICENSE file for more information.
 
-For a clearly defined open-source license, see the MIT License.
+<div align="center">
 
-⭐ Support
+⭐ If you like this project, give it a star!
 
-If you find this project useful:
+Your support motivates further development.
 
-Give the repository a ⭐ Star.
-Fork the project.
-Share it with other Python and cryptocurrency enthusiasts.
-Contribute to its development.
+Made with ❤️ and Python
 
-Thanks for checking out Crypto Tracker Telegram Bot!
+© Ahmet Baytören
 
-Made with ❤️ and Python by Ahmet Baytören.
+</div>
