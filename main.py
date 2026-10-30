@@ -21,7 +21,7 @@ async def kripto(update, context):
         etherium_price=get_coin_price('ETHUSDT')
 
         coin_prices=(f"Bitcoin: ${bitcoin_price}\n"
-                     f"Etherium : ${etherium_price}")
+                     f"Ethereum : ${ethereum_price}")
 
         await update.message.reply_text(coin_prices)
         await asyncio.sleep(10)
